@@ -1,0 +1,261 @@
+/* =================== ESTILOS GENERALES =================== */
+@font-face {
+    font-family: 'FuentePagina';
+    src: url(../fonts/static/RobotoSerif_28pt-MediumItalic.ttf);
+}
+
+/* Aplicar box-sizing para incluir padding y border en ancho y alto,
+   y reset de márgenes y padding en todos los elementos */
+   * {
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño */
+    margin: 0;              /* Elimina márgenes por defecto */
+    padding: 0;             /* Elimina padding por defecto */
+}
+
+body {
+    font-family: 'FuentePagina';
+    /* Fuente principal del texto */
+    margin: 0;
+    /* Elimina los márgenes exteriores del body */
+    padding: 0;
+    /* Elimina el relleno interno del body */
+    background-color: #fffafa;
+    /* Color de fondo rosado muy claro */
+    color: #444;
+    /* Color del texto general en gris oscuro */
+    line-height: 1.6;
+    /* Altura de línea para mejorar la legibilidad */
+}
+
+/* Estilos del encabezado (header) */
+header {
+    background-color: #ffe4e9;
+    /* Fondo rosado suave */
+    text-align: center;
+    /* Centra el contenido del header */
+    padding: 20px 0;
+    /* Espaciado arriba y abajo de 20px */
+    border-bottom: 2px solid #fbc3d0;
+    /* Línea inferior rosada para separar */
+}
+
+/* Logo de la empresa */
+.logo img {
+    width: 100px;                        /* Ancho fijo para logo */
+    height: auto;                       /* Altura automática para mantener proporción */
+    transition: transform 0.3s ease-in-out; /* Transición para efecto hover */
+}
+
+/* Efecto hover para agrandar ligeramente el logo */
+.logo img:hover {
+    transform: scale(1.1);              /* Escala el logo al 110% */
+}
+
+/* Estilos para la navegación */
+nav {
+    margin-top: 15px;                   /* Separación del logo hacia abajo */
+    display: flex;                     /* Usar flexbox para los enlaces */
+    gap: 20px;                        /* Espacio uniforme entre enlaces */
+    justify-content: center;           /* Centrar los enlaces horizontalmente */
+    flex-wrap: wrap;                  /* Permite que enlaces pasen a otra línea en pantallas pequeñas */
+}
+
+/* Estilo para cada enlace del menú */
+nav a {
+    color: #d46a92;                   /* Color rosa para el texto */
+    text-decoration: none;            /* Sin subrayado */
+    font-weight: 600;                 /* Negrita moderada */
+    font-size: 1.1rem;                /* Tamaño legible */
+    display: inline-flex;             /* Para alinear iconos y texto */
+    align-items: center;              /* Centrar verticalmente icono y texto */
+    gap: 6px;                        /* Separación entre icono y texto */
+    transition: color 0.3s, transform 0.3s; /* Transición para color y escala */
+}
+
+/* Estilo para enlace activo y hover */
+nav a.activo,
+nav a:hover {
+    color: #b54870;                  /* Color más oscuro en hover/activo */
+    text-decoration: underline;     /* Subrayado */
+    transform: scale(1.05);          /* Escala ligeramente */
+}
+
+/* Estilos del contenido principal (main) */
+main {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Estilos de las secciones */
+section {
+    margin-bottom: 50px;
+    /* Espacio inferior entre secciones */
+    background-color: #fff0f5;
+    /* Fondo muy suave rosado */
+    padding: 20px;
+    /* Espaciado interno */
+    border-radius: 12px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    /* Sombra suave para dar profundidad */
+    animation: fadeInUp 0.8s ease-in-out; /* Animación suave de aparición */
+}
+
+.Primero{
+    display: flex;                  /* Flexbox para contenido de texto e imagen */
+    flex-direction: column;         /* Colocar texto arriba y foto abajo */
+    gap: 15px;                     /* Espacio entre elementos */
+}
+
+/* Estilos para los títulos dentro de las secciones */
+section h2 {
+    color: #d46a92;
+    /* Color rosa fuerte */
+    font-size: 1.8rem;
+    /* Tamaño de fuente */
+    margin-bottom: 15px;
+    /* Espacio inferior debajo del título */
+}
+
+/* Estilos para los párrafos dentro de las secciones */
+section p {
+    font-size: 1.1rem;
+    /* Tamaño de fuente ligeramente más grande que el normal */
+    margin-bottom: 10px;
+    /* Espacio inferior después de los párrafos */
+}
+
+/* Imagen dentro de las secciones */
+section img {
+    width: 100%;                  /* Imagen ocupa todo el ancho posible */
+    max-width: 500px;             /* Máximo ancho para no crecer demasiado */
+    height: 300px;                /* Altura fija */
+    object-fit: cover;            /* Recorta la imagen para llenar el espacio */
+    border-radius: 10px;          /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Sombra leve */
+    transition: transform 0.4s ease-in-out; /* Transición para hover */
+    align-self: center;
+}
+
+/* Efecto hover para la imagen */
+section img:hover {
+    transform: scale(1.05);       /* Aumenta ligeramente tamaño */
+}
+
+/* Estilos para los enlaces dentro de la sección con clase "primero" */
+.Segundo a {
+    color: #eb26cd;
+    /* Color fucsia brillante */
+    font-weight: bold;  
+    display: inline-flex;
+    transition: transform 0.3s ease;
+    text-decoration: none; 
+}
+
+/* Cambios de estilo al pasar el mouse sobre enlaces de "primero" */
+.Segundo a:hover {
+    color: #941481;
+    /* Color púrpura más oscuro al pasar el mouse */
+    transform: scale(1.05);
+
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+    background-color: #ffdce4;
+    /* Fondo rosado suave */
+    text-align: center;
+    /* Texto centrado */
+    padding: 15px;
+    /* Espaciado interno */
+    font-size: 0.9rem;
+    /* Tamaño de fuente más pequeño */
+    color: #555;
+    /* Color gris oscuro */
+    border-top: 2px solid #fbc3d0;
+    /* Borde superior en color rosado claro */
+}
+
+/* Estilos para los enlaces dentro del pie de página */
+footer a {
+    color: #e126c5;
+    /* Color fucsia brillante para enlaces */
+}
+
+/* Estilo para los enlaces del footer al pasar el mouse */
+footer a:hover {
+    color: #941481;
+    /* Color púrpura oscuro en hover */
+}
+
+/* =================== ANIMACIONES =================== */
+
+/* Fondo de partículas que cubre todo el main */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+
+.contenido-main {
+    position: relative;
+    z-index: 1;
+    padding: 20px 20px;
+    max-width: 1000px;
+    margin: 30px auto 0 auto;
+}
+
+/* Animación para aparecer subiendo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================== RESPONSIVIDAD =================== */
+
+/* Pantallas medianas y pequeñas */
+@media only screen and (max-width: 768px) {
+    /* Cambiar layout del header a columna para pantallas pequeñas */
+    header {
+        flex-direction: column;        /* Columna para logo y menú */
+        align-items: center;           /* Centrar contenido */
+    }
+
+    /* Separar el menú del logo */
+    nav {
+        margin-top: 15px;              /* Espacio arriba */
+        gap: 15px;                    /* Espacio más pequeño entre links */
+        font-size: 14px;              /* Tamaño de fuente más pequeño */
+        justify-content: center;      /* Centrar links */
+    }
+
+    /* Ajuste del tamaño de fuente del menú */
+    nav a {
+        margin-right: 0;               /* Quitar margen derecho para evitar scroll */
+    }
+
+    /* Ajuste de main para móviles */
+    main {
+        margin: 20px auto 0 auto;     /* Ajusta margen superior */
+        gap: 30px;                    /* Espacio más pequeño entre secciones */
+        padding: 0 10px;              /* Espacio lateral reducido */
+    }
+
+    /* Ajuste tamaño imágenes en móviles */
+    section img {
+        max-width: 100%;              /* Imagen ocupa todo el ancho */
+        height: auto;                /* Altura automática para mantener proporción */
+    }
+}
+

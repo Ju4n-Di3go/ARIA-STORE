@@ -1,0 +1,365 @@
+@font-face {
+    font-family: 'FuentePagina';
+    src: url(../fonts/static/RobotoSerif_28pt-MediumItalic.ttf);
+}
+
+/* Aplicar box-sizing para incluir padding y border en ancho y alto,
+   y reset de márgenes y padding en todos los elementos */
+   * {
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño */
+    margin: 0;              /* Elimina márgenes por defecto */
+    padding: 0;             /* Elimina padding por defecto */
+}
+
+body {
+    font-family: 'FuentePagina';
+    /* Fuente principal del texto */
+    margin: 0;
+    /* Elimina los márgenes exteriores del body */
+    padding: 0;
+    /* Elimina el relleno interno del body */
+    background-color: #fffafa;
+    /* Color de fondo rosado muy claro */
+    color: #444;
+    /* Color del texto general en gris oscuro */
+    line-height: 1.6;
+    /* Altura de línea para mejorar la legibilidad */
+}
+
+/* Estilos del encabezado (header) */
+header {
+    background-color: #ffe4e9;
+    /* Fondo rosado suave */
+    text-align: center;
+    /* Centra el contenido del header */
+    padding: 20px 0;
+    /* Espaciado arriba y abajo de 20px */
+    border-bottom: 2px solid #fbc3d0;
+    /* Línea inferior rosada para separar */
+}
+
+/* Logo de la empresa */
+.logo img {
+    width: 100px;                        /* Ancho fijo para logo */
+    height: auto;                       /* Altura automática para mantener proporción */
+    transition: transform 0.3s ease-in-out; /* Transición para efecto hover */
+}
+
+/* Efecto hover para agrandar ligeramente el logo */
+.logo img:hover {
+    transform: scale(1.1);              /* Escala el logo al 110% */
+}
+
+/* Estilos para la navegación */
+nav {
+    margin-top: 15px;                   /* Separación del logo hacia abajo */
+    display: flex;                     /* Usar flexbox para los enlaces */
+    gap: 20px;                        /* Espacio uniforme entre enlaces */
+    justify-content: center;           /* Centrar los enlaces horizontalmente */
+    flex-wrap: wrap;                  /* Permite que enlaces pasen a otra línea en pantallas pequeñas */
+}
+
+/* Estilo para cada enlace del menú */
+nav a {
+    color: #d46a92;                   /* Color rosa para el texto */
+    text-decoration: none;            /* Sin subrayado */
+    font-weight: 600;                 /* Negrita moderada */
+    font-size: 1.1rem;                /* Tamaño legible */
+    display: inline-flex;             /* Para alinear iconos y texto */
+    align-items: center;              /* Centrar verticalmente icono y texto */
+    gap: 6px;                        /* Separación entre icono y texto */
+    transition: color 0.3s, transform 0.3s; /* Transición para color y escala */
+}
+
+/* Estilo para enlace activo y hover */
+nav a.activo,
+nav a:hover {
+    color: #b54870;                  /* Color más oscuro en hover/activo */
+    text-decoration: underline;     /* Subrayado */
+    transform: scale(1.05);          /* Escala ligeramente */
+}
+
+/* Contenedor principal que organiza las secciones verticalmente */
+main {
+    display: flex;                   /* Usamos flexbox */
+    flex-direction: column;          /* Organiza las secciones en columna */
+    gap: 40px;                      /* Espacio entre secciones */
+    max-width: 1000px;              /* Ancho máximo del contenido */
+    margin: 30px auto 30px auto; /* Centra y separa del header y footer */
+}
+
+.Fondo-Promociones{
+background-color: #e47aa3;
+border-radius: 20px;
+animation: fadeInUp 0.8s ease-in-out; /* Animación suave de aparición */
+}
+
+.titulo-promociones {
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    color: #fcfafa;
+}
+
+.contenedor-promociones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tarjeta {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    /* Alto fijo para todas las imágenes */
+    object-fit: cover;
+    /* Recorta y mantiene proporciones */
+    border-radius: 10px;
+}
+
+
+.tarjeta h4 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.tarjeta p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.descuento {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #d46a92;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+    background-color: #ffdce4;
+    /* Fondo rosado suave */
+    text-align: center;
+    /* Texto centrado */
+    padding: 15px;
+    /* Espaciado interno */
+    font-size: 0.9rem;
+    /* Tamaño de fuente más pequeño */
+    color: #555;
+    /* Color gris oscuro */
+    border-top: 2px solid #fbc3d0;
+    /* Borde superior en color rosado claro */
+}
+.terminos-condiciones h3 {
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+    /* Centra el título */
+}
+
+.terminos-condiciones p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Centra el bloque horizontalmente */
+    text-align: center;
+    /* Centra el texto dentro del bloque */
+}
+
+/* =================== ANIMACIONES =================== */
+
+/* Animación para aparecer subiendo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================== MEDIA QUERIES RESPONSIVAS =================== */
+
+/* Tablets grandes y pantallas medianas */
+@media (max-width: 1024px) {
+    .contenedor-promociones {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 20px 15px;
+    }
+  
+    .titulo-promociones {
+      font-size: 1.7rem;
+      padding: 20px 10px;
+    }
+  
+    .tarjeta img {
+      height: 180px;
+    }
+  
+    nav {
+      gap: 15px;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 768px) {
+    /* Cambiar layout del header a columna para pantallas pequeñas */
+    header {
+        flex-direction: column;        /* Columna para logo y menú */
+        align-items: center;           /* Centrar contenido */
+    }
+
+    /* Separar el menú del logo */
+    nav {
+        margin-top: 15px;              /* Espacio arriba */
+        gap: 15px;                    /* Espacio más pequeño entre links */
+        font-size: 14px;              /* Tamaño de fuente más pequeño */
+        justify-content: center;      /* Centrar links */
+    }
+
+    /* Ajuste del tamaño de fuente del menú */
+    nav a {
+        margin-right: 0;               /* Quitar margen derecho para evitar scroll */
+    }
+  
+    .contenedor-promociones {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 15px;
+    }
+  
+    .titulo-promociones {
+      font-size: 1.5rem;
+      padding: 15px;
+    }
+  
+    .tarjeta img {
+      height: 160px;
+    }
+  
+    .tarjeta h4 {
+      font-size: 1rem;
+    }
+  
+    .tarjeta p {
+      font-size: 0.85rem;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+  
+    .terminos-condiciones p {
+      padding: 0 10px;
+    }
+  }
+  
+  /* Móviles grandes */
+  @media (max-width: 480px) {
+    /* Cambiar layout del header a columna para pantallas pequeñas */
+    header {
+        flex-direction: column;        /* Columna para logo y menú */
+        align-items: center;           /* Centrar contenido */
+    }
+
+    /* Separar el menú del logo */
+    nav {
+        margin-top: 15px;              /* Espacio arriba */
+        gap: 15px;                    /* Espacio más pequeño entre links */
+        font-size: 14px;              /* Tamaño de fuente más pequeño */
+        justify-content: center;      /* Centrar links */
+    }
+
+    /* Ajuste del tamaño de fuente del menú */
+    nav a {
+        margin-right: 0;               /* Quitar margen derecho para evitar scroll */
+    }
+  
+    .contenedor-promociones {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      padding: 10px;
+    }
+  
+    .titulo-promociones {
+      font-size: 1.3rem;
+      padding: 10px;
+    }
+  
+    .tarjeta {
+      padding: 10px;
+    }
+  
+    .tarjeta img {
+      height: 140px;
+    }
+  
+    .tarjeta h4 {
+      font-size: 0.95rem;
+    }
+  
+    .tarjeta p {
+      font-size: 0.8rem;
+    }
+  
+    .descuento {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+    }
+  
+    .terminos-condiciones p {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      padding: 0 10px;
+    }
+  }
+  
+  /* Móviles pequeños */
+  @media (max-width: 320px) {
+    .contenedor-promociones {
+      padding: 8px;
+    }
+  
+    .titulo-promociones {
+      font-size: 1.1rem;
+    }
+  
+    .tarjeta img {
+      height: 120px;
+    }
+  
+    .tarjeta p {
+      font-size: 0.75rem;
+    }
+  
+    .terminos-condiciones p {
+      padding: 0 5px;
+    }
+  }
+  

@@ -1,0 +1,216 @@
+/* =================== ESTILOS GENERALES =================== */
+@font-face {
+    font-family: 'FuentePagina';
+    src: url(../fonts/static/RobotoSerif_28pt-MediumItalic.ttf);
+}
+
+/* Aplicar box-sizing para incluir padding y border en ancho y alto,
+   y reset de márgenes y padding en todos los elementos */
+* {
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño */
+    margin: 0;              /* Elimina márgenes por defecto */
+    padding: 0;             /* Elimina padding por defecto */
+}
+
+/* Estilos base para el cuerpo de la página */
+body {
+    font-family:'FuentePagina'; /* Fuente principal */
+    line-height: 1.6;                     /* Altura de línea para legibilidad */
+    background-color: #fffafa;            /* Color de fondo suave */
+    color: #444;                         /* Color de texto */
+    margin: 0;                            /* Elimina los márgenes exteriores del body */
+    padding: 0;                          /* Elimina el relleno interno del body */                  
+    font-size: 16px;                    /* Tamaño base de fuente */
+}
+
+/* =================== ENCABEZADO =================== */
+
+/* Contenedor header en columna, centrando todo */
+header {
+    background-color: #ffe4e9;            /* Fondo rosa pastel */
+    border-bottom: 2px solid #fbc3d0;    /* Borde inferior rosa */
+    padding: 20px 10px;                   /* Espaciado interno */
+    display: flex;                       /* Flexbox para layout flexible */
+    flex-direction: column;              /* Organizar contenido en columna (logo arriba, menú abajo) */
+    align-items: center;                 /* Centrar horizontalmente todo el contenido */
+}
+
+/* Logo de la empresa */
+.logo img {
+    width: 100px;                        /* Ancho fijo para logo */
+    height: auto;                       /* Altura automática para mantener proporción */
+    transition: transform 0.3s ease-in-out; /* Transición para efecto hover */
+}
+
+/* Efecto hover para agrandar ligeramente el logo */
+.logo img:hover {
+    transform: scale(1.1);              /* Escala el logo al 110% */
+}
+
+/* Estilos para la navegación */
+nav {
+    margin-top: 15px;                   /* Separación del logo hacia abajo */
+    display: flex;                     /* Usar flexbox para los enlaces */
+    gap: 20px;                        /* Espacio uniforme entre enlaces */
+    justify-content: center;           /* Centrar los enlaces horizontalmente */
+    flex-wrap: wrap;                  /* Permite que enlaces pasen a otra línea en pantallas pequeñas */
+}
+
+/* Estilo para cada enlace del menú */
+nav a {
+    color: #d46a92;                   /* Color rosa para el texto */
+    text-decoration: none;            /* Sin subrayado */
+    font-weight: 600;                 /* Negrita moderada */
+    font-size: 1.1rem;                /* Tamaño legible */
+    display: inline-flex;             /* Para alinear iconos y texto */
+    align-items: center;              /* Centrar verticalmente icono y texto */
+    gap: 6px;                        /* Separación entre icono y texto */
+    transition: color 0.3s, transform 0.3s; /* Transición para color y escala */
+}
+
+/* Estilo para enlace activo y hover */
+nav a.activo,
+nav a:hover {
+    color: #b54870;                  /* Color más oscuro en hover/activo */
+    text-decoration: underline;     /* Subrayado */
+    transform: scale(1.05);          /* Escala ligeramente */
+}
+
+/* =================== CONTENIDO PRINCIPAL =================== */
+
+/* Contenedor principal que organiza las secciones verticalmente */
+main {
+    display: flex;                   /* Usamos flexbox */
+    flex-direction: column;          /* Organiza las secciones en columna */
+    gap: 40px;                      /* Espacio entre secciones */
+    max-width: 1000px;              /* Ancho máximo del contenido */
+    margin: 40px auto 0 auto;       /* Centra y separa del header */
+}
+
+/* Estilos para cada sección */
+section {
+    background-color: #fff0f5;      /* Fondo rosa muy claro */
+    border-radius: 12px;            /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    padding: 20px;                  /* Espaciado interno */
+    animation: fadeInUp 1.2s ease-in-out; /* Animación suave de aparición */
+    display: flex;                  /* Flexbox para contenido de texto e imagen */
+    flex-direction: column;         /* Colocar texto arriba y foto abajo */
+    gap: 15px;                     /* Espacio entre elementos */
+}
+
+/* Títulos de cada sección */
+section h2 {
+    color: #d46a92;                /* Color rosa */
+    font-family: 'Pacifico', cursive; /* Fuente decorativa */
+    font-size: 1.8rem;             /* Tamaño grande */
+    display: flex;                 /* Flex para alinear iconos y texto */
+    align-items: center;           /* Centrar verticalmente */
+    gap: 8px;                    /* Espacio entre icono y texto */
+    transition: transform 0.3s;    /* Animación suave para hover */
+    margin-bottom: 10px;           /* Separación debajo del título */
+}
+
+/* Hover en el título para darle movimiento */
+section h2:hover {
+    transform: translateY(-3px);  /* Mueve el título hacia arriba */
+}
+
+/* Estilo para los párrafos */
+section p {
+    font-size: 1.1rem;             /* Tamaño de texto legible */
+}
+
+/* Estilo para listas de valores */
+section ul {
+    list-style-type: square;       /* Viñetas cuadradas */
+    padding-left: 20px;            /* Sangría para la lista */
+    margin-top: 10px;              /* Separación arriba */
+}
+
+/* Elementos individuales de la lista */
+section ul li {
+    margin-bottom: 6px;            /* Espacio entre items */
+}
+
+/* Imagen dentro de las secciones */
+section img {
+    width: 100%;                  /* Imagen ocupa todo el ancho posible */
+    max-width: 500px;             /* Máximo ancho para no crecer demasiado */
+    height: 300px;                /* Altura fija */
+    object-fit: cover;            /* Recorta la imagen para llenar el espacio */
+    border-radius: 10px;          /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Sombra leve */
+    transition: transform 0.4s ease-in-out; /* Transición para hover */
+    align-self: center;           /* Centra la imagen horizontalmente */
+}
+
+/* Efecto hover para la imagen */
+section img:hover {
+    transform: scale(1.05);       /* Aumenta ligeramente tamaño */
+}
+
+/* =================== PIE DE PÁGINA =================== */
+
+/* Estilos para el footer */
+footer {
+    background-color: #ffdce4;          /* Fondo rosa pastel */
+    border-top: 2px solid #fbc3d0;     /* Borde superior */
+    text-align: center;                 /* Texto centrado */
+    padding: 15px;                      /* Espaciado */
+    font-size: 0.9rem;                  /* Tamaño pequeño */
+    color: #555;                       /* Color gris */
+    animation: fadeInUp 1s ease-in-out; /* Animación de entrada */
+    margin: 40px auto 0 auto; 
+}
+
+/* =================== ANIMACIONES =================== */
+
+/* Animación para aparecer subiendo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================== RESPONSIVIDAD =================== */
+
+/* Pantallas medianas y pequeñas */
+@media only screen and (max-width: 768px) {
+    /* Cambiar layout del header a columna para pantallas pequeñas */
+    header {
+        flex-direction: column;        /* Columna para logo y menú */
+        align-items: center;           /* Centrar contenido */
+    }
+
+    /* Separar el menú del logo */
+    nav {
+        margin-top: 15px;              /* Espacio arriba */
+        gap: 15px;                    /* Espacio más pequeño entre links */
+        font-size: 14px;              /* Tamaño de fuente más pequeño */
+        justify-content: center;      /* Centrar links */
+    }
+
+    /* Ajuste del tamaño de fuente del menú */
+    nav a {
+        margin-right: 0;               /* Quitar margen derecho para evitar scroll */
+    }
+
+    /* Ajuste de main para móviles */
+    main {
+        margin: 20px auto 0 auto;     /* Ajusta margen superior */
+        gap: 30px;                    /* Espacio más pequeño entre secciones */
+        padding: 0 10px;              /* Espacio lateral reducido */
+    }
+
+    /* Ajuste tamaño imágenes en móviles */
+    section img {
+        max-width: 100%;              /* Imagen ocupa todo el ancho */
+        height: auto;                /* Altura automática para mantener proporción */
+    }
+}

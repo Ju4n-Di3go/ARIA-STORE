@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuraciones del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive para móviles -->
+    <title>Contactanos - Aria Store</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Kit de Font Awesome para iconos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Kit de Font Awesome para iconos de img Redes sociales-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../estilos/Estilos-Contactanos.css"> <!-- Enlace al archivo de estilos CSS -->
+</head>
+
+<body>
+
+    <!-- Encabezado (logo y menú de navegación) -->
+    <header>
+        <div class="logo">
+            <!-- Logo de la empresa -->
+            <img src="../img/imagenAria.png" alt="Logo de Aria Store">
+        </div>
+
+        <!-- Menú de navegación con iconos -->
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i>Inicio</a>
+            <a href="catalago.html"><i class="fas fa-shopping-bag"></i>Catálogo</a>
+            <a href="nosotros.html"><i class="fas fa-users"></i>Nosotros</a>
+            <a href="Promociones.html"><i class="fa-solid fa-gift"></i>Promociones</a>
+            <a href="Contactanos.html" class="activo"><i class="fas fa-envelope"></i>Contacto</a>
+        </nav>
+    </header>
+
+        <section class="contacto">
+            <div class="informacion">
+                <h3 class="animacion">¡Te responderemos en menos de 24 horas!</h3>
+                <h2 class="animacion parteH2">NOS UBICAMOS EN</h2>
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63576.13808501049!2d-80.68330068210545!3d-5.182412499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904a1bdf91d8b825%3A0xa4bfa3480b1255ea!2sUniversidad%20Tecnol%C3%B3gica%20Del%20Per%C3%BA!5e0!3m2!1ses!2spe!4v1747896714211!5m2!1ses!2spe" 
+                allowfullscreen 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+    
+                <h2>SIGUENOS</h2>
+                <div class="logos">
+                    <a href="https://www.facebook.com" target="_blank" class="logosA"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="logosA"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com" target="_blank" class="logosA"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <br>
+                <p>&copy; 2025 Aria Store. Todos los derechos reservados</p>
+    
+            </div>
+
+
+            <div class="formulario">
+                <h2>CONTACTANOS</h2>
+                <form action="#">
+    
+                        <label for="tnombre">Nombre</label>
+                        <input type="text" name="tnombre" id="tnombre" required minlength="3" placeholder="Nombre Obligatorio">
+    
+                        <label for="tcorreo">Correo</label>
+                        <input type="email" name="tcorreo" id="tcorreo" required placeholder="Correo Obligatorio">
+    
+                        <label for="tconsulta">Consulta</label>
+                        <select name="tconsulta" id="tconsulta" required>
+                            <option value="">Seleccione una opcion</option>
+                            <option value="Reclamo">Reclamo</option>
+                            <option value="Dudas">Dudas</option>
+                        </select>
+    
+                        <label for="tareaText">Mensaje</label>
+                        <textarea name="tareaText" id="tareaText" required minlength="10" placeholder="Ingrese su mensaje"></textarea>
+    
+                        <button type="submit">Enviar</button>
+    
+                </form>
+            </div>
+        </section>
+    </body>
+
+</html>
